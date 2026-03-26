@@ -4,7 +4,7 @@
   "trailingSlash": false,
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "headers": [
         {
           "key": "Referrer-Policy",
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "source": "/(robots.txt|sitemap.xml|site.webmanifest)",
+      "source": "/robots.txt",
       "headers": [
         {
           "key": "Cache-Control",
@@ -42,11 +42,20 @@
       ]
     },
     {
-      "source": "/(.*\\.(css|js|png|jpg|jpeg|svg|webp|ico))",
+      "source": "/sitemap.xml",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/site.webmanifest",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
         }
       ]
     }
