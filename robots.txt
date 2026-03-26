@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Host: nutridecide.vercel.app
 
 Sitemap: https://nutridecide.vercel.app/sitemap.xml
