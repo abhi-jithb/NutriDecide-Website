@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NutriDecide account deletion request instructions.">
+  <title>NutriDecide Account Deletion</title>
+  <style>
+    :root {
+      --bg: #f4f7f6;
+      --card: #ffffff;
+      --text: #15342c;
+      --muted: #4f6a63;
+      --border: #d7e2de;
+      --shadow: 0 14px 30px rgba(16, 57, 46, 0.1);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      font-family: "DM Sans", "Poppins", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 12%, #dff2ea 0, transparent 38%),
+        radial-gradient(circle at 85% 18%, #e8f1fb 0, transparent 34%),
+        var(--bg);
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+    }
+
+    .card {
+      width: min(680px, 100%);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(1.25rem, 3.5vw, 2rem);
+    }
+
+    h1 {
+      margin: 0 0 0.9rem;
+      line-height: 1.2;
+      font-size: clamp(1.5rem, 3.2vw, 2rem);
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin: 0 0 0.95rem;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 1rem;
+    }
+
+    ol {
+      margin: 0.3rem 0 1rem;
+      padding-left: 1.2rem;
+      color: var(--text);
+    }
+
+    li {
+      margin: 0.4rem 0;
+      line-height: 1.6;
+    }
+
+    .note {
+      margin-top: 1rem;
+      background: #eef6f3;
+      border: 1px solid #d8e8e2;
+      border-radius: 12px;
+      padding: 0.85rem 0.95rem;
+      color: #34584d;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      margin-top: 1.2rem;
+      color: #5d766f;
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        align-items: start;
+        padding-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card" aria-label="Account deletion instructions">
+    <h1>NutriDecide Account Deletion</h1>
+
+    <p>To request account deletion:</p>
+    <ol>
+      <li>Send an email to <strong>nutridecide@gmail.com</strong></li>
+      <li>Use the subject: <strong>"Delete my account"</strong></li>
+      <li>Include your registered email address</li>
+    </ol>
+
+    <p>Your account and all associated data will be permanently deleted within 3-5 days.</p>
+
+    <p class="note">This process ensures your data is securely removed from our systems.</p>
+
+    <footer>NutriDecide &copy; 2026</footer>
+  </main>
+</body>
+</html>
