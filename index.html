@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NutriDecide helps you make better food choices by analyzing products based on your health profile.">
+  <title>NutriDecide | Official Website & Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #f6f8f7;
+      --surface: #ffffff;
+      --surface-soft: #eef3f0;
+      --text: #16332b;
+      --muted: #4d6a62;
+      --accent: #1f8a6b;
+      --accent-dark: #166650;
+      --border: #d9e4df;
+      --shadow: 0 10px 28px rgba(15, 56, 45, 0.08);
+      --radius: 16px;
+      --max: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "DM Sans", "Poppins", "Nunito Sans", "Helvetica Neue", sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 10%, #dff3ea 0, transparent 40%),
+        radial-gradient(circle at 88% 14%, #e9f3ff 0, transparent 34%),
+        var(--bg);
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(6px);
+      background: rgba(246, 248, 247, 0.9);
+      border-bottom: 1px solid rgba(217, 228, 223, 0.7);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.8rem 0;
+    }
+
+    .brand {
+      margin: 0;
+      font-size: 1.1rem;
+      letter-spacing: 0.2px;
+      font-weight: 700;
+    }
+
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .nav a:hover {
+      color: var(--accent-dark);
+    }
+
+    .hero {
+      padding: 5rem 0 3.2rem;
+    }
+
+    .hero-panel {
+      background: linear-gradient(160deg, #ffffff 0%, #f3faf7 100%);
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) + 6px);
+      box-shadow: var(--shadow);
+      padding: clamp(1.4rem, 3vw, 2.6rem);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 0.7rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-dark);
+      background: #ddf2ea;
+      border: 1px solid #c7e9dd;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      margin: 0 0 0.9rem;
+      color: #10261f;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      letter-spacing: -0.01em;
+    }
+
+    .lead {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--muted);
+      max-width: 64ch;
+      margin: 0;
+    }
+
+    .cta {
+      margin-top: 1.3rem;
+      display: inline-block;
+      text-decoration: none;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
+      border: 1px solid transparent;
+    }
+
+    .cta:hover {
+      background: var(--accent-dark);
+    }
+
+    section {
+      padding: 1.6rem 0;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      box-shadow: 0 6px 16px rgba(10, 40, 32, 0.04);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .step {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 999px;
+      background: #d6ede4;
+      color: #0f4f3f;
+      font-weight: 700;
+      margin-bottom: 0.45rem;
+    }
+
+    .notice {
+      background: #fff8e8;
+      border: 1px solid #f1ddb4;
+      border-radius: var(--radius);
+      padding: 1rem;
+      color: #6a4e17;
+    }
+
+    .policy {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      box-shadow: 0 6px 16px rgba(10, 40, 32, 0.04);
+    }
+
+    .policy h3 {
+      margin-top: 1.2rem;
+      margin-bottom: 0.45rem;
+      font-size: 1rem;
+    }
+
+    .policy h3:first-of-type {
+      margin-top: 0.3rem;
+    }
+
+    .policy p,
+    .policy li {
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 0.4rem 0 0.8rem;
+      padding-left: 1.1rem;
+    }
+
+    .contact-box {
+      background: #f0f8f5;
+      border: 1px solid #d5e9e2;
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+
+    .contact-box a {
+      color: var(--accent-dark);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 2.4rem;
+      padding: 1.2rem 0 2rem;
+      color: #4e6b62;
+      border-top: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 800px) {
+      .card-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 4.2rem;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <p class="brand">NutriDecide</p>
+      <nav aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#privacy-policy">Privacy Policy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-panel">
+        <span class="eyebrow">Health and Nutrition Scanner</span>
+        <h1>NutriDecide</h1>
+        <p class="lead"><strong>Scan. Understand. Decide better.</strong></p>
+        <p class="lead">NutriDecide helps you make better food choices by analyzing products based on your health profile.</p>
+        <a class="cta" href="#" aria-label="Coming soon on Play Store">Coming soon on Play Store</a>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <h2>Features</h2>
+        <div class="card-grid">
+          <article class="card"><strong>Barcode scanning</strong><br>Quickly scan packaged foods in seconds.</article>
+          <article class="card"><strong>Personalized health insights</strong><br>Recommendations based on your profile.</article>
+          <article class="card"><strong>Allergy detection</strong><br>Identify ingredients that may trigger allergies.</article>
+          <article class="card"><strong>Ingredient analysis</strong><br>Understand what is inside every product.</article>
+          <article class="card"><strong>Offline fast performance</strong><br>Core scanning flow remains fast and lightweight.</article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <article class="step">
+            <span class="step-number">1</span>
+            <h3>Scan product</h3>
+            <p>Use your camera to scan a food product barcode.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">2</span>
+            <h3>Analyze ingredients</h3>
+            <p>NutriDecide checks ingredients against your health profile.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">3</span>
+            <h3>Get clear verdict</h3>
+            <p>Receive a simple verdict to help you decide with confidence.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="disclaimer-title">
+      <div class="container notice">
+        <h2 id="disclaimer-title">Disclaimer</h2>
+        <p><strong>NutriDecide provides general nutritional guidance and is not a substitute for professional medical advice.</strong></p>
+      </div>
+    </section>
+
+    <section id="privacy-policy" aria-labelledby="privacy-title">
+      <div class="container policy">
+        <h2 id="privacy-title">Privacy Policy</h2>
+        <p><strong>Effective date:</strong> March 26, 2026</p>
+        <p>NutriDecide respects your privacy. This policy explains what information we collect, why we collect it, how we protect it, and the choices you have.</p>
+
+        <h3>Information We Collect</h3>
+        <ul>
+          <li>Email address</li>
+          <li>Basic profile information, such as age, gender, and health conditions</li>
+        </ul>
+
+        <h3>Why We Collect This Data</h3>
+        <p>We collect this information to personalize product analysis and provide health-relevant food guidance.</p>
+
+        <h3>Data Storage and Security</h3>
+        <p>Your data is stored securely using Firebase with appropriate technical and organizational safeguards.</p>
+
+        <h3>Data Sharing</h3>
+        <p>We do not sell your data, and we do not share your personal data with third parties for marketing or advertising purposes.</p>
+
+        <h3>Your Control and Rights</h3>
+        <p>You can request deletion of your account and associated personal data at any time by contacting us.</p>
+
+        <h3>Contact for Privacy Questions</h3>
+        <p>Email: <a href="mailto:nutridecide@gmail.com">nutridecide@gmail.com</a></p>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container contact-box">
+        <h2 id="contact-title">Contact</h2>
+        <p>Email: <a href="mailto:nutridecide@gmail.com">nutridecide@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">NutriDecide | 2026 | All rights reserved</div>
+  </footer>
+</body>
+</html>
