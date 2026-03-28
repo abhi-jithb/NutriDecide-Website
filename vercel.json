@@ -57,12 +57,5 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/delete-account",
-      "destination": "/delete-account.html",
-      "permanent": true
-    }
   ]
 }
